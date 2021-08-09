@@ -1,27 +1,50 @@
-# Mindustry Mod Template
-A blank template for Mindustry mods with an existing Gradle configuration to compile and dex-ify, and Github Actions to automatically do both and upload the artifacts.
+# Unit Information
+The mod displays some more unit, wave, core, tile status.
 
-## Compiling
-JDK 8.\
-Task `dexify` requires `d8` from Android `build-tools` > `28.0.1`.
+## ingame display
+displays on left side, you can change status display by button.
 
-Plain Jar is for JVMs (desktop).\
-Dexed Jar is for for JVMs (desktop) and ARTs (Android).\
-These two are separate in order to decrease size of mod download.
+### Unit Status
+shows unit name, armor, health, shield, items, commanded units, weapons, ammo and payload amount as possible as.
+- [ ] shrink size
+    - [x] remove command part
+    - [ ] add scroll on weapon part
+    
+### Wave Status
+shows unit amount for each waves. modifiable showed max wave on graphic setting. 
+- [x] fix padding bug
+- [x] shows current, empty, previous wave too
 
-### Windows
-Plain Jar: `gradlew build`\
-Dexify Plain Jar: `gradlew dexify`\
-Build Plain & Dexify Jar: `gradlew buildDex`
+### Core Status
+shows core hp and location. you can move screen to click core icon.
+- [x] remove "?" button
+- [x] fix health bar position
 
-### *nix
-Plain Jar: `./gradlew build`\
-Dexify Plain Jar: `./gradlew dexify`\
-Build Plain & Dexify Jar: `./gradlew buildDex`
+### Tile Status
+shows block, tile, overlay tile with its location.
+- [ ] add more info...
 
-## I have no idea what I'm doing with this
+### hidden
+shows nothing
 
-1. Rename directories in `src/` to avoid collisions with other mods that didn't.
-2. Change `pGroup` in `gradle.properties` to match up with the new directories.
-3. Update `main` in `assets/mod.json` to line up with renamed directories.
-4. Refer to [Compiling](#compiling).
+## additional things
+### magic cursor
+r a i n b o w (can toggle on setting)
+
+### block scanner
+scan turret range and hp by circle and bar. (can toggle on setting)
+- [ ] add filter setting to make scanner can scan not only turrret, wall but also another blocks.
+
+### rendered block info
+shows every blocks' status(even enemy), some info bars. (suggestion by @nichrosia)
+- [ ] make it
+
+### rendered unit info
+shows every units' hp, ammo, shield by bar under each unit.
+- [ ] show more detail info as number
+
+## Setting
+can toggle display on/off ingame, set some ui opacity etc.
+- [ ] improve setting ui
+    - [ ] separate setting because it's too many
+    - [ ] add its description

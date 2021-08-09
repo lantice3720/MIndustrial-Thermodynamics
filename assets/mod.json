@@ -1,11 +1,11 @@
 {
-  "name": "modtemplate",
-  "displayName": "Template",
-  "author": "[#8738ff[]]Sonnicon[[]]",
-  "description": "Gradle jar Mindustry mod template",
-  "version": "0",
-  "main": "sonnicon.modtemplate.ModTemplate",
-  "minGameVersion": "105",
+  "name": "mindustrial-thermodynamics",
+  "displayName": "Mindustrial Thermodynamics",
+  "author": "lan",
+  "description": "Makes your gameplay more hotter and hotter..maybe harder?",
+  "version": "1.0",
+  "main": "MIT.Main",
+  "minGameVersion": "129",
   "dependencies": [],
   "hidden": false,
   "java": true
