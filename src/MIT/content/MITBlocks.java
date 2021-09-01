@@ -1,5 +1,6 @@
 package MIT.content;
 
+import MIT.world.blocks.cmdCenter;
 import MIT.world.blocks.fusionCore;
 import arc.util.Log;
 import mindustry.content.Bullets;
@@ -18,7 +19,9 @@ public class MITBlocks implements ContentList {
             //turrets
             singe,
             //power
-            fusionCoreBlock;
+            fusionCoreBlock,
+            //units
+            cmdCenterBlock;
 
     @Override
     public void load(){
@@ -44,6 +47,10 @@ public class MITBlocks implements ContentList {
             size = 4;
             health = 3560;
             Log.info("hehe?");
+        }};
+
+        cmdCenterBlock = new cmdCenter("cmd-center"){{
+            requirements(Category.units, with(Items.copper, 1));
         }};
     }
 }

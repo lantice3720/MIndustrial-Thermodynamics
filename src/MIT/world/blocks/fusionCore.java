@@ -1,17 +1,14 @@
 package MIT.world.blocks;
 
-import arc.Core;
-import arc.Input;
 import arc.scene.style.TextureRegionDrawable;
-import arc.scene.ui.ImageButton;
-import arc.scene.ui.TextArea;
 import arc.scene.ui.layout.Table;
 import arc.util.Log;
 import arc.util.Tmp;
-import jdk.internal.icu.lang.UCharacterDirection;
 import mindustry.Vars;
 import mindustry.gen.Building;
 import mindustry.gen.Icon;
+import mindustry.gen.Tex;
+import mindustry.ui.Styles;
 import mindustry.ui.dialogs.BaseDialog;
 import mindustry.world.blocks.power.PowerGenerator;
 
@@ -24,6 +21,11 @@ public class fusionCore extends PowerGenerator {
         super(name);
         hasPower = true;
         hasLiquids = true;
+        configurable = true;
+        drawDisabled = false;
+        logicConfigurable = false;
+        update = true;
+        solid = true;
 
         Log.info("What Happened?");
     }
@@ -38,6 +40,9 @@ public class fusionCore extends PowerGenerator {
     }
 
     public class fusionCoreBuild extends Building{
+
+        Integer count = 1;
+
         @Override
         public void onDestroyed(){
             tile.getLinkedTilesAs(block, c->{Log.info(this);});
@@ -61,8 +66,21 @@ public class fusionCore extends PowerGenerator {
 
         @Override
         public void buildConfiguration(Table table){
-            ImageButton button = new ImageButton();
-            table.add(button);
+            table.button(Icon.edit, Styles.clearTransi, () -> {
+                BaseDialog dialog = new BaseDialog("FRCP", Styles.fullDialog);
+                dialog.cont.clear();
+                dialog.addCloseListener();
+                dialog.cont.pane(t->{
+                    t.table(Tex.buttonEdge1, tab ->{
+                        tab.row().left();
+                        tab.button(Icon.menu, Styles.clearPartiali, () -> new BaseDialog(""){{
+                                    addCloseButton();
+                                }}.show()
+                        );
+                    });
+                });
+                dialog.show();
+            }).size(40f);
             table.row();
         }
     }
