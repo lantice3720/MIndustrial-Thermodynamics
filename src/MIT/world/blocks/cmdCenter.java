@@ -37,6 +37,7 @@ public class cmdCenter extends Block {
         logicConfigurable = true;
 
 
+
         // after click the icon
 //        config(UnitCommand.class, (CommandBuild build, UnitCommand command) -> {
 //            if(build.team.data().command != command){
