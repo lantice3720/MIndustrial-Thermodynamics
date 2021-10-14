@@ -7,8 +7,12 @@ Hot hot hot potatooo
 - [ ] Fusion Reactor
     - [ ] Cooool(Maybe hot) Sprite
     - [ ] Configure UI
-        - [X] Reactor Resize buttons
-        - [ ] Reactor Build buttons
+        - [X] Resize buttons
+        - [ ] Build buttons
         - [ ] Reactor Start/Shutdown buttons
-    - [ ] Circle building
- 
+    - [ ] Build
+        - [ ] Reactor frame block
+        - [ ] Reactor ready animation
+    - [ ] Boot
+        - [ ] Booting animation
+        - [ ] Working animation
