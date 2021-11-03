@@ -1,8 +1,9 @@
 # MIndustrial Thermodynamics
 Just a "Oh-no"textured mod
 
+
 ## Contents
-Hot hot hot potatooo
+Hot hot hot potatooo?
 
 - [ ] Fusion Reactor
     - [ ] Cooool(Maybe hot) Sprite
@@ -16,3 +17,6 @@ Hot hot hot potatooo
     - [ ] Boot
         - [ ] Booting animation
         - [ ] Working animation
+
+- [ ] Fission Reactor
+    - [ ] 
