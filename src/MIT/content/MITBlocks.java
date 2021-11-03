@@ -1,5 +1,6 @@
 package MIT.content;
 
+import MIT.world.blocks.casingBlock;
 import MIT.world.blocks.cmdCenter;
 import MIT.world.blocks.fusionCore;
 import arc.util.Log;
@@ -21,7 +22,10 @@ public class MITBlocks implements ContentList {
             //power
             fusionCoreBlock,
             //units
-            cmdCenterBlock;
+            cmdCenterBlock,
+
+            //other
+            fusionCasing;
 
     @Override
     public void load(){
@@ -51,6 +55,11 @@ public class MITBlocks implements ContentList {
 
         cmdCenterBlock = new cmdCenter("cmd-center"){{
             requirements(Category.units, with(Items.copper, 1));
+        }};
+
+        fusionCasing = new casingBlock("fusion-casing"){{
+            requirements(Category.effect, with(Items.copper, 1));
+            size = 2;
         }};
     }
 }
